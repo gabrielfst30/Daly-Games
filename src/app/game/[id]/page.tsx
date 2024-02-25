@@ -12,7 +12,7 @@ interface PropsParams {
   };
 }
 
-//RETORNAMOS UMA PROMISE COM O METADATA
+//RETORNAMOS UMA PROMISE COM O METADATA E VAMOS GERAR UMA METADATA PARA CADA ID
 export async function generateMetadata({
   params,
 }: PropsParams): Promise<Metadata> {
