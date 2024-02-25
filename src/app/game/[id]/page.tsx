@@ -25,26 +25,26 @@ export async function generateMetadata({
       .catch(() => {
         return {
           title: "DalyGames - Descubra jogos incríveis para se divertir.",
-          description: `${response.description.slice(0, 100)}...`,
-          openGraph: {
-            title: response.title,
-            images: response.image_url,
-          },
-          robots: {
-            index: true,
-            follow: true,
-            nocache: true,
-            googleBot: {
-              index: true,
-              follow: true,
-              noimageindex: true,
-            },
-          },
         };
       });
 
     return {
-      title: response.title,
+      title: "DalyGames - Descubra jogos incríveis para se divertir.",
+      description: `${response.description.slice(0, 100)}...`,
+      openGraph: {
+        title: response.title,
+        images: response.image_url,
+      },
+      robots: {
+        index: true,
+        follow: true,
+        nocache: true,
+        googleBot: {
+          index: true,
+          follow: true,
+          noimageindex: true,
+        },
+      },
     };
   } catch (err) {
     return {
